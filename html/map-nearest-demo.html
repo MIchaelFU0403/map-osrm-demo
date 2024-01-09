@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OSRM API Nearest Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 设置地图容器的样式 */
+    #map {
+      width: 100%;
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+<h1>OSRM API Nearest Demo</h1>
+<p>输入经纬度坐标，查找最近的路上点。</p>
+<form>
+  <label for="lon">经度：</label>
+  <input type="text" id="lon" name="lon">
+  <br>
+  <label for="lat">纬度：</label>
+  <input type="text" id="lat" name="lat">
+  <br>
+  <label for="num">数量：</label>
+  <input type="text" id="num" name="num">
+  <br>
+  <button type="button" onclick="findNearestByQuery()">查找最近点</button>
+</form>
+<div id="map"></div>
+
+<!-- 引入 Leaflet 和 OSRM API -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/osrm-client@1.0.0-rc.3/dist/osrm-client.min.js"></script>
+<script src="../js/map-nearest-demo.js"></script>
+</body>
+</html>
